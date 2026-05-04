@@ -17,5 +17,6 @@ public class MyUserDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Users users = userRepo.findByName(username).orElseThrow(()-> new UsernameNotFoundException("User not found"));
         return new UserPrincipal(users);
+        //hauifjaoj
     }
 }
